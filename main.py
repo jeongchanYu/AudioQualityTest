@@ -56,4 +56,4 @@ for i in range(len(clean_file_list)):
     PESQ = pesq(clean_signal, noisy_signal, clean_sample_rate)
 
     print(" SNR:{} | SSNR:{} | PESQ:{}".format(SNR, SSNR, PESQ))
-    cf.write_csv_file(csv_file_path, file_name, "{},{},{},{}".format(SNR, SSNR, PESQ))
+    cf.write_csv_file(csv_file_path, file_name, "{},{},{}".format(SNR, SSNR, PESQ))
