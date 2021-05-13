@@ -5,8 +5,8 @@ import os
 import wav
 
 
-clean_file_path = "C:/Users/YJC/Desktop/DenoiseWavenetCond/test_result/DWC_22_16_22_100/result"
-noisy_file_path = "C:/Users/YJC/Desktop/DenoiseWavenetCond/test_result/DWC_22_16_22_100/noise"
+clean_file_path = "C:/Users/YJC/PycharmProjects/DenoiseWavenetCond/dataset/test/orig"
+noisy_file_path = "C:/Users/YJC/PycharmProjects/DenoiseWavenetCond/dataset/test/noise"
 csv_file_path   = "./22_16_22.csv"
 ssnr_frame_size = 1600
 
@@ -59,4 +59,4 @@ for i in range(len(clean_file_list)):
     NB_PESQ = pesq(clean_sample_rate, clean_signal, noisy_signal, 'nb')
 
     print(" SNR:{} | SSNR:{} | WB_PESQ:{} | NB_PESQ:{}".format(SNR, SSNR, WB_PESQ, NB_PESQ))
-    cf.write_csv_file(csv_file_path, file_name, "{},{},{},{}".formant(SNR, SSNR, WB_PESQ, NB_PESQ))
+    cf.write_csv_file(csv_file_path, file_name, "{},{},{},{}".format(SNR, SSNR, WB_PESQ, NB_PESQ))
