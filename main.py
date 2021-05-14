@@ -34,7 +34,7 @@ else:
     noisy_file_list = [noisy_file_path]
 
 cf.clear_csv_file(csv_file_path)
-cf.write_csv_file(csv_file_path, "file name", "SNR,SSNR,WB_PESQ,NB_PESQ")
+cf.write_csv_file(csv_file_path, "file name", "SNR,SSNR,PESQ")
 
 for i in range(len(clean_file_list)):
     if clean_path_isdir:
